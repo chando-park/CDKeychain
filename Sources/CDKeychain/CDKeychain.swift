@@ -57,7 +57,7 @@ public class TaoKeychain: NSObject {
         }
     }
     
-    func dataFor(keyName : String) -> Data? {
+    public func dataFor(keyName : String) -> Data? {
         let keychainQueryDictionary = self.keychainSearch(keyName: keyName)
         keychainQueryDictionary.setObject(kSecMatchLimitOneValue, forKey: kSecMatchLimitValue)
         keychainQueryDictionary.setObject(kCFBooleanTrue, forKey: kSecReturnDataValue)
@@ -69,7 +69,7 @@ public class TaoKeychain: NSObject {
         return nil
     }
     
-    func setData(value: Data?, forKey keyName: String, isUpdateNewVal: Bool = true) -> Bool {
+    public func setData(value: Data?, forKey keyName: String, isUpdateNewVal: Bool = true) -> Bool {
         
         guard let value = value else {
             return false
