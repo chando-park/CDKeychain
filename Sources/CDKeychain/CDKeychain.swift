@@ -15,7 +15,7 @@ public let kSecClassGenericPasswordValue = NSString(format: kSecClassGenericPass
 public class TaoKeychain: NSObject {
     
     var serviceIdentifier: String!
-    init(serviceIdentifier: String) {
+    public init(serviceIdentifier: String) {
         self.serviceIdentifier = serviceIdentifier
     }
     
